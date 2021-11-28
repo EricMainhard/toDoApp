@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <!-- TAILWIND CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- FONTS GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+    <title>ToDo App</title>
+</head>
+
+    <main class="2xl:container flex flex-col justify-center h-screen text-white">
+        <section class="app-container mx-auto w-4/5 h-4/5 grid gap-1 justify-items-center shadow-2xl max-w-lg grid-rows-5">
+            <h1 class="my-3 text-2xl">ToDo App</h1>
+
+            <div id="errorMsg" class="flex flex-col justify-evenly bg-red-400 w-4/5 items-center rounded-lg">
+                <p> Entrada vacía 😪 </p> 
+                <button id="closeError" class="text-center underline">OK</button>
+            </div>
+
+            <form class="app-form row-start-2 text-center">
+
+                <input type="text" placeholder="Nueva tarea" autofocus id="input" class="block text-black">
+
+                <button type="submit" class="add-task rounded bg-gray-100 text-black p-3 m-2"> Agregar Tarea </button>
+
+            </form>
+
+            <div class="tasks font-extralight w-4/5">
+                
+            </div>
+
+        </section>
+    </main>
+
+    
+    <template id="task-template">
+        <div class="task p-3 flex flex-col items-center border-2 border-white">
+            <h3></h3>
+            <div class="task-controls flex justify-between w-20 my-3">
+                <i class="fas fa-check btn-action text-2xl" role="button"></i>
+                <i class="fas fa-times btn-action text-2xl" role="button"></i>
+            </div>
+        </div>
+    </template>
+
+
+    <script src="./app.js"></script>
+<body>
+</body>
+</html>

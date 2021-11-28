@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    background-color: #e55c8a;
+}
+.app-container{
+    background-color:#3c424a;
+}
+
+#errorMsg{
+    display: none;
+}
+
+.task.done{
+    background: turquoise;
+}
+.task.done h3{
+    text-decoration: line-through;
+}
+
+.happyFace{
+    animation-name: happyFace;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: yellow;
+}
+
+
+
+@keyframes happyFace {
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-.5rem);}
+    100%{transform:translateY(0);}
+}
